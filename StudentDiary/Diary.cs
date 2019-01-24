@@ -19,25 +19,19 @@ namespace StudentDiary
             ratings.Add(rating);
         }
 
-        public float CalculateAvarage()
+        internal DiaryStatistics ComputeStatitsics()
         {
-            float sum = 0, avg = 0;
+            DiaryStatistics stats = new DiaryStatistics();
+            float sum = 0f;
             foreach (var rating in ratings)
             {
                 sum += rating;
             }
-            avg = sum / ratings.Count(); // count da ilość elementów kolekcji
-            return avg;
-        }
+            stats.avgGrade = sum / ratings.Count();
+            stats.MaxGrade = ratings.Max();
+            stats.MinGrade = ratings.Min();
 
-        public float MaxRating()
-        {
-            return ratings.Max();
-        }
-
-        public float MinRating()
-        {
-            return ratings.Min();
+            return stats;
         }
     }
 }
