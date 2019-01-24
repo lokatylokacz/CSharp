@@ -11,6 +11,7 @@ namespace StudentDiary
         static void Main(string[] args)
         {
             Diary diary = new Diary(); //Diary() - metoda konstruktor; Tworzenie instancji obiektu typu klasa diary 
+            // konstreuktor domyślny => publiczny / pola inicjuje wartoścami 0 / false / null
             //diary.AddRating(5); // niejawna konwersja bo nic nie tracimy
             //diary.AddRating(8.5f); // double nie da się przekazać do float dlatego jest f żeby wiedział że to jest typ float
             //diary.AddRating(4.7f);

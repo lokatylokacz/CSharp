@@ -6,8 +6,12 @@ namespace StudentDiary
 {
     class Diary
     {
+        public Diary()
+        {
+            ratings = new List<float>();
+        }
         // stan klasy (zmienne w klasie pola)
-        List<float> ratings = new List<float>(); // lista - kolekcja generyczna // 
+        List<float> ratings; // lista - kolekcja generyczna // 
 
         // zachowania klasy (zazwyczaj metody)
         public void AddRating(float rating)
